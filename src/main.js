@@ -9,6 +9,16 @@ import './assets/css/clean-blog.css'
 import DefaultLayout from '~/layouts/Default.vue'
 
 export default function(Vue, { router, head, isClient }) {
+  Vue.mixin({
+    // return() {
+    //   GRIDSOME_API_URL: process.env.GRIDSOME_API_URL
+    // },
+    data: () => {
+      return {
+        GRIDSOME_API_URL: process.env.GRIDSOME_API_URL,
+      }
+    },
+  })
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 }

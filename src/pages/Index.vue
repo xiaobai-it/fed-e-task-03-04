@@ -4,7 +4,7 @@
     <header
       class="masthead"
       :style="{
-        backgroundImage: `url(http://localhost:1337${$page.general.edges[0].node.cover.url})`,
+        backgroundImage: `url(${GRIDSOME_API_URL}${$page.general.edges[0].node.cover.url})`,
       }"
     >
       <div class="overlay"></div>
@@ -126,7 +126,9 @@ export default {
     return {}
   },
 
-  mounted() {}, // 生命周期 - 挂载之后
+  mounted() {
+    console.log(this.GRIDSOME_API_URL)
+  }, // 生命周期 - 挂载之后
 }
 </script>
 
