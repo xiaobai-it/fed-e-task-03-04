@@ -139,7 +139,7 @@ export default {
         phone: this.phone,
         message: this.message,
       }
-      const res = await axios.post('http://localhost:1337/contacts', params)
+      const res = await axios.post(`${this.GRIDSOME_API_URL}/contacts`, params)
       console.log(res)
       if (res.status === 200 && res.data) {
         this.name = ''
