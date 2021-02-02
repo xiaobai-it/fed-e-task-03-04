@@ -127,7 +127,9 @@ export default {
     }
   },
 
-  mounted() {}, // 生命周期 - 挂载之后
+  mounted() {
+    console.log(this.GRIDSOME_API_URL)
+  }, // 生命周期 - 挂载之后
 
   computed: {},
 
